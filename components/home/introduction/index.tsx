@@ -8,7 +8,7 @@ import { Button } from "flowbite-react";
 import Image from "next/image";
 import Link from "next/link";
 
-export default function Section1() {
+export default function Introduction() {
   const itemCount = [
     {
       title: "10 سال سابقه",
@@ -68,15 +68,10 @@ export default function Section1() {
   };
 
   return (
-    <section className="relative place-items-center overflow-hidden md:grid md:min-h-screen">
-      <Image
-        src={"/images/logo.svg"}
-        alt="logo"
-        width={100}
-        height={100}
-        className="fixed -z-1 w-screen opacity-40 blur-xs md:h-screen"
-      />
-
+    <section
+      style={{ backgroundImage: "url('/images/bg.png')" }}
+      className="bg- relative place-items-center overflow-y-hidden bg-contain bg-fixed bg-center bg-no-repeat md:grid md:min-h-screen"
+    >
       <div className="container h-full md:grid md:place-items-center">
         <div>
           <div className="bg-navy mt-4 mb-5 flex w-full flex-col items-center gap-5 rounded-4xl px-4 py-10 text-white backdrop-blur-sm md:mt-0 md:w-180 md:flex-row-reverse md:justify-between lg:w-200 lg:p-15">

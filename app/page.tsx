@@ -1,9 +1,11 @@
-import Section1 from "@/components/home/section1";
+import ContactUs from "@/components/home/contactUs";
+import Introduction from "@/components/home/introduction";
 
 export default function HOME() {
   return (
     <>
-      <Section1 />
+      <Introduction />
+      <ContactUs />
     </>
   );
 }
