@@ -1,0 +1,57 @@
+@import "tailwindcss";
+@import "flowbite-react/plugin/tailwindcss";
+@source "../.flowbite-react/class-list.json";
+
+@theme {
+  --color-navy: #0a1628;
+  --color-navy-mid: #112240;
+  --color-navy-light: #1a3a6e;
+  --color-gold: #c9a227;
+  --color-gold-light: #e8be45;
+  --color-gold-pale: #f5e5a0;
+  --color-white: #ffffff;
+  --color-off-white: #f4f1eb;
+  --color-text-light: #a8b8d0;
+  --color-accent-line: #c9a227;
+  --radius-lg: 8px;
+}
+
+@font-face {
+  font-family: yekanBlack;
+  src: url("/fonts/iranyekanwebblackfanum.woff") format("woff");
+}
+@font-face {
+  font-family: yekanRegular;
+  src: url("/fonts/iranyekanwebregularfanum.woff") format("woff");
+}
+@font-face {
+  font-family: yekanBold;
+  src: url("/fonts/iranyekanwebboldfanum.woff") format("woff");
+}
+
+.yekanBlack {
+  font-family: yekanBlack;
+}
+.yekanRegular {
+  font-family: yekanRegular;
+}
+.yekanBold {
+  font-family: yekanBold;
+}
+
+.container {
+  @apply mx-auto px-4;
+}
+* {
+  direction: rtl;
+  text-align: right;
+}
+
+button {
+  @apply gap-2;
+}
+
+body {
+  @apply text-navy-mid;
+  font-family: yekanRegular;
+}
