@@ -46,6 +46,9 @@
   direction: rtl;
   text-align: right;
 }
+html {
+  scroll-behavior: smooth;
+}
 
 button {
   @apply gap-2;

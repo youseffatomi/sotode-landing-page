@@ -15,7 +15,8 @@ type msg = {
 
 const bot = new BaleBot(process.env.BOT_TOKEN, { polling: true });
 
-const TARGET_CHAT_ID = process.env.TARGET_CHAT_ID;
+const TARGET_CHAT_ME = process.env.TARGET_CHAT_ME;
+const TARGET_CHAT_SO = process.env.TARGET_CHAT_SO;
 
 // دستور /start
 bot.onText(/\/start/, (msg: msg) => {
@@ -36,8 +37,8 @@ async function sendFormData({ name, lastName, tel, description }: Body) {
     `👤 *نام:* ${name} ${lastName}\n` +
     `📞 *شماره تماس:* ${tel}\n` +
     `📝 *توضیحات:*\n${description || "—"}`;
-
-  return bot.sendMessage(TARGET_CHAT_ID, text, { parse_mode: "Markdown" });
+  bot.sendMessage(TARGET_CHAT_ME, text, { parse_mode: "Markdown" });
+  return bot.sendMessage(TARGET_CHAT_SO, text, { parse_mode: "Markdown" });
 }
 
 export async function POST(request: Request) {
@@ -78,7 +79,7 @@ export async function POST(request: Request) {
       { status: 200, headers: { "Content-Type": "application/json" } },
     );
   } catch (error) {
-    console.error("خطا در ارسال پیام:", error?.message);
+    console.error("خطا در ارسال پیام:", (error as Error).message);
 
     await sendFormData({ name, lastName, tel, description });
 

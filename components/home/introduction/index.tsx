@@ -54,10 +54,7 @@ export default function Introduction() {
             color=""
             className="bg-gold text-navy mx-auto md:mx-0"
           >
-            <Link
-              href={"tel://09361561007"}
-              className="flex items-center gap-2"
-            >
+            <Link href={"#contact"} className="flex items-center gap-2">
               برای گرفتن مشاوره کلیک کنید
               <IconPhone stroke={1} />
             </Link>
@@ -69,6 +66,7 @@ export default function Introduction() {
 
   return (
     <section
+      id="up"
       style={{ backgroundImage: "url('/images/bg.png')" }}
       className="bg- relative place-items-center overflow-y-hidden bg-contain bg-fixed bg-center bg-no-repeat md:grid md:min-h-screen"
     >

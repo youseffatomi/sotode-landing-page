@@ -2,10 +2,8 @@ import {
   IconCategory2,
   IconHeadset,
   IconHome,
-  IconPhone,
   IconPhoneRinging,
 } from "@tabler/icons-react";
-import { Button } from "flowbite-react";
 import Image from "next/image";
 import Link from "next/link";
 
@@ -14,24 +12,24 @@ export default function Header() {
     right: [
       {
         name: "خانه",
-        link: "#",
+        link: "#up",
         icon: <IconHome stroke={1} size={20} />,
       },
       {
         name: "مشاوره",
-        link: "#",
+        link: "#contact",
         icon: <IconHeadset stroke={1} size={20} />,
       },
     ],
     left: [
       {
         name: "تماس",
-        link: "#",
+        link: "#call",
         icon: <IconPhoneRinging stroke={1} size={20} />,
       },
       {
         name: "خدمات",
-        link: "#",
+        link: "#services",
         icon: <IconCategory2 stroke={1} size={20} />,
       },
     ],
@@ -50,7 +48,9 @@ export default function Header() {
             <span className="text-xs">{name}</span>
           </Link>
         ))}
-        <Image src="/images/logo.svg" alt="logo" width={50} height={50} />
+        <Link href="#up">
+          <Image src="/images/logo.svg" alt="logo" width={50} height={50} />
+        </Link>
         {menu.left.map(({ name, icon, link }, index) => (
           <Link
             href={link}
