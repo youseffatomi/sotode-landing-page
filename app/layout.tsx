@@ -3,7 +3,7 @@ import Footer from "@/components/layouts/footer";
 import Header from "@/components/layouts/header";
 
 export const metadata = {
-  title: "حسین ستوده کیا",
+  title: "حسین ستوده",
   description: "",
 };
 

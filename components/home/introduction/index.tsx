@@ -38,7 +38,7 @@ export default function Introduction() {
     return (
       <div className="grid gap-3 md:max-w-80 lg:max-w-100">
         <h1 className="yekanBlack text-center! text-4xl md:text-right! lg:text-5xl">
-          حسین ستوده کیا
+          حسین ستوده
         </h1>
         <div className="yekanBold text-center! text-xl md:text-right!">
           موسسه حقوقی وکالتی
